@@ -15,13 +15,18 @@ DEVICE_PATH := device/oneplus/dodge
 TARGET_OTA_ASSERT_DEVICE := OP5D0DL1,OP5D55L1
 
 # Display
-TARGET_SCREEN_DENSITY := 640
+TARGET_SCREEN_DENSITY := 560
 
 # Kernel
 TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_DODGE_DTB=y
 
+
+# Partitions
+-include vendor/infinity/config/BoardConfigReservedSize.mk
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 

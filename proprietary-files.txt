@@ -59,6 +59,30 @@ odm/etc/oprec_audrec_params/oprec_record_ID99_Bypass.txt
 odm/etc/oprec_audrec_params/oprec_record_ID9_HE.bin
 odm/etc/oprec_audrec_params/oprec_record_ID9_HE.txt
 
+# Audio spatializer
+odm/etc/spatializer/HP_MOVIE_ANALOG.bin
+odm/etc/spatializer/HP_MOVIE_BLUETOOTH.bin
+odm/etc/spatializer/HP_MOVIE_DIGITAL.bin
+odm/etc/spatializer/HP_MOVIE_GALILEO.bin
+odm/etc/spatializer/HP_MUSIC_ANALOG.bin
+odm/etc/spatializer/HP_MUSIC_BLUETOOTH.bin
+odm/etc/spatializer/HP_MUSIC_DIGITAL.bin
+odm/etc/spatializer/HP_MUSIC_GALILEO.bin
+odm/etc/spatializer/SPAT_AUDIOX_ROOMMODEL_MOVIE.bin
+odm/etc/spatializer/SPAT_AUDIOX_ROOMMODEL_MUSIC.bin
+odm/etc/spatializer/SPK_MOVIE_lvl1.bin
+odm/etc/spatializer/SPK_MOVIE_lvl10.bin
+odm/etc/spatializer/SPK_MOVIE_lvl2.bin
+odm/etc/spatializer/SPK_MOVIE_lvl3.bin
+odm/etc/spatializer/SPK_MOVIE_lvl4.bin
+odm/etc/spatializer/SPK_MOVIE_lvl5.bin
+odm/etc/spatializer/SPK_MOVIE_lvl6.bin
+odm/etc/spatializer/SPK_MOVIE_lvl7.bin
+odm/etc/spatializer/SPK_MOVIE_lvl8.bin
+odm/etc/spatializer/SPK_MOVIE_lvl9.bin
+odm/lib64/soundfx/libOplusSpatializerAidl_DKY.so
+odm/lib64/liboplus_audiox.so
+
 # Camera
 odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
 odm/etc/camera/aigc/aigc_models/blurDet_sm8750.bin
@@ -1432,6 +1456,10 @@ odm/etc/sdm_display_resolution_extn.xml:vendor/etc/display/sdm_display_resolutio
 vendor/etc/ltm_config_AA569_P_3_A0019_dsc_cmd_mode_panel.xml
 vendor/etc/spr_cfg_AA569_P_3_A0019_dsc_cmd_mode_panel.xml
 
+# Display features
+odm/etc/vintf/manifest/vintf_manifext_aidl_panelchaplin.xml
+odm/lib64/libPanelChaplin.so
+
 # Dolby Vision
 odm/bin/hw/dvs-aidl-service
 odm/etc/dolby/display/dolby_vision.cfg
@@ -1488,6 +1516,13 @@ odm/etc/horae/horae_target.conf
 # NFC firmware
 odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
 
+# Secure element
+odm/bin/hw/android.hardware.secure_element-service.qti
+odm/etc/init/android.hardware.secure_element-service.qti.rc
+odm/etc/vintf/manifest/secure_element-service.xml
+odm/etc/vintf/manifest/secure_element_omapi_service.xml
+odm/etc/hal_uuid_map_config.xml:vendor/etc/hal_uuid_map_config.xml;SYMLINK=hal_uuid_map_23.xml,hal_uuid_map_29.xml,hal_uuid_map_31.xml;TRYSRCFIRST
+
 # Sensors
 vendor/lib64/sensors.qsh.so
 
@@ -1521,6 +1556,11 @@ vendor/etc/sensors/config/qsh_camera_imx615_3.json
 vendor/etc/sensors/config/qsh_camera_imx688_6.json
 vendor/etc/sensors/config/qsh_camera_imx688_6_actuator.json
 vendor/etc/sensors/config/qsh_camera_ov32c4c_4.json
+
+# Touch
+odm/bin/hw/vendor-oplus-hardware-touch-V2-service
+odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc
+odm/etc/vintf/manifest/manifest_touch_aidl.xml
 
 # Touchscreen firmware
 odm/firmware/tp/23821/FW_S3910_BOE.img
@@ -1661,5 +1701,6 @@ odm/etc/wifi/peach/bdwlang.b0i
 odm/etc/wifi/peach/bdwlang.elf
 odm/etc/wifi/peach/regdb.bin
 odm/etc/wifi/peach/regdb_version
+odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 
 # vi:ft=conf
